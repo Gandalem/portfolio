@@ -1,48 +1,19 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="ko_kr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <style>
-        h1 {
-            text-align: center;
-        }
-        a > p{ text-align :right;}
-        a+div{
-            border-top: 5px solid black;
-        }
-        
-        div c{
-
-            border: 2px solid black;
-            border-radius: 5px;
-        }
-        a:link{
-            text-decoration-line: none;
-        }
-        div.online{
-            width:40%;
-        }
-    </style>
+<script src="./includ.js" defer></script>
 </head>
-
-
 <body>
-    <a href="/index.html">
-        <h1>all game reveiws</h1>
-    </a>
-    <a href="#">
-        <p>login</p>
-    </a>
-    <div>
-        <div class="online"><a href="#">online</a></div>
-        <div><a href="#">packge</a></div>
-    </div>
+<header data-include="./header.html"></header>
 
+<!-- <aside data-include="./aside.html"></aside> -->
 
+<main data-include="./main1.html"></main>
+
+<footer data-include="./footer.html"></footer>
 </body>
-
 </html>

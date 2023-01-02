@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{border: 1px black solid;}
+        #clear{clear: both;}
+        ul{list-style: none; border: 1px red solid;}
+        a:link{
+            text-decoration-line: none;
+        }
+        section{
+            border: 1px red solid;
+        }
+        #section_title{
+            float: left;
+            margin: 10px;
+        }
+        #section_time{
+            float: right;
+            margin: 10px;
+        }
+        #section_mainmenu{
+            text-align: center;
+           padding: 10px;
+           font-size: 17px;
+        }
+        #section_mainmenu > .menu > li{
+            margin-right: 10%;
+            display: inline-block;
+        }
+        .menu{overflow: hidden;}
+        .hide{overflow: hidden;height:0;}
+        .menu:hover .hide{
+            height: auto;
+            transition-duration:0.1s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section id="section_title">
+            <h1>game community</h1>
+        </section>
+        <section id="section_time">
+            <h3>sample01 : 내일까지</h3>
+        </section>
+        <div id="clear"></div>
+
+        <section id="section_mainmenu">
+            <ul class="menu">
+                <li>
+                    <a href="#">이벤트/특가</a>
+                    <ul class="hide">
+                        <li>이벤트</li>
+                        <li>이벤트</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">뉴스/정보</a>
+                    <ul class="hide">
+                        <li>이벤트</li>
+                        <li>이벤트</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">질문/토론</a>
+                    <ul class="hide">
+                        <li>이벤트</li>
+                        <li>이벤트</li>
+                    </ul>
+                </li>
+                <li style="margin-right: 0%;">
+                    <a href="#">커뮤니티</a>
+                    <ul class="hide">
+                        <li>이벤트</li>
+                        <li>이벤트</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </header>
+</body>
+</html>
