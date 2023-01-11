@@ -19,35 +19,49 @@
         #section_title{
             float: left;
             margin: 10px;
+            font-size: 28px;
+            
         }
         #section_time{
             float: right;
             margin: 10px;
+            font-size: 38px;
+            text-align: center;
         }
         #section_mainmenu{
             text-align: center;
            padding: 10px;
            font-size: 17px;
+           
         }
         #section_mainmenu > .menu > li{
             margin-right: 10%;
             display: inline-block;
+            
         }
-        .menu{overflow: hidden;}
-        .hide{overflow: hidden;height:0;}
-        .menu:hover .hide{
-            height: auto;
-            transition-duration:0.1s;
+        .menu , .hide{
+            margin: 0;
+            padding: 0;
+            
+        }
+        .hide{
+            height: 0;
+            overflow: hidden;
+            transition-duration: 1s;
+        }
+        .menu > li:hover .hide{
+            height: 60px;
+            transition-duration: 2s;
         }
     </style>
 </head>
 <body>
     <header>
         <section id="section_title">
-            <h1>game community</h1>
+            <h1><a href="../index.html">game community<a></h1>
         </section>
         <section id="section_time">
-            <h3>sample01 : 내일까지</h3>
+            <h3 id="clock"></h3>
         </section>
         <div id="clear"></div>
 
@@ -86,4 +100,16 @@
         </section>
     </header>
 </body>
+<script>
+    function clock(){
+        var today = new Date();
+        var hour = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+
+        document.getElementById("clock").innerHTML = hour+':'+min+':'+sec;
+        setTimeout('clock()',1000);
+    }
+    clock();
+</script>  
 </html>

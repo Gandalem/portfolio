@@ -7,7 +7,7 @@
     <title>main1</title>
     <style>
         main{
-            margin: 10px;
+            margin: 10px auto;
             width: 1080px;
         }
         #section_login div{
@@ -43,11 +43,22 @@
             float: left;
             margin-top: 10px;
             width: 780px;
+            height: auto;
         }
         #section_event{
             float: right;
             margin-top: 10px;
             width: 280px;
+            height: 210px;
+            position: relative;
+        }
+        #section_event img{
+            height: 210px;
+            width: 280px;
+        }
+        #board1{
+            float: left;
+            width: 50%;
         }
     </style>
 </head>
@@ -64,16 +75,46 @@
         <div id="clear"></div>
         <section id="section_board">
             <div>
-                <p>공지사항</p>
-                <ul>
+                <ul id="board1">
+                    <p>공지사항</p>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
+                </ul>
+                <ul id="board2">
+                    <p>공지사항</p>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
+                </ul>
+                <div id="clear"></div>
+                <ul id="board1">
+                    <p>공지사항</p>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
+                </ul>
+                <ul id="board2">
+                    <p>공지사항</p>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
+                    <li>안녕하세요</li>
                     <li>안녕하세요</li>
                 </ul>
             </div>
         </section>
         <section id="section_event">
-            event
+            <img src="/src/img/광고1.jpg" alt="광고1">
+            <div id="event">
+                <div id="btnleft">L</div>
+                <div id="btnright">R</div>
+            </div>
         </section>
         <div id="clear"></div>
     </main>
 </body>
+
 </html>
