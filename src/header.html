@@ -1,65 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header</title>
+    <script src="/js/method.js"></script>
     <style>
-        *{margin: 0;padding: 0;}
-        body{border: 1px black solid;}
-        #clear{clear: both;}
-        ul{list-style: none; border: 1px red solid;}
-        a:link{
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            background-color: gray;
+        }
+        ul{
+            list-style-type: none;
+        }
+
+        #clear {
+            clear: both;
+        }
+        a:link {
             text-decoration-line: none;
         }
-        section{
-            border: 1px red solid;
-        }
-        #section_title{
+
+    
+        #section_title {
             float: left;
             margin: 10px;
             font-size: 28px;
-            
         }
-        #section_time{
+        #section_title > h1 > a{
+            color: black;
+        }
+
+        #section_time {
             float: right;
             margin: 10px;
             font-size: 38px;
             text-align: center;
         }
-        #section_mainmenu{
+
+        #section_mainmenu {
             text-align: center;
-           padding: 10px;
-           font-size: 17px;
-           
+            padding: 10px;
+            font-size: 17px;
+            background-color: rgb(201, 201, 201);
         }
-        #section_mainmenu > .menu > li{
+
+        #section_mainmenu>.menu>li {
             margin-right: 10%;
             display: inline-block;
-            
         }
-        .menu , .hide{
+
+        .menu,
+        .hide {
             margin: 0;
             padding: 0;
-            
         }
-        .hide{
+
+        .hide {
             height: 0;
             overflow: hidden;
             transition-duration: 1s;
+            padding-top: 10px;
         }
-        .menu > li:hover .hide{
-            height: 60px;
+
+        ul.menu a{
+            color: black;
+        }
+
+        .menu>li:hover .hide {
+            height: 90px;   /*메뉴바 출력 길이*/
             transition-duration: 2s;
+        }
+        a.top{
+            border: 1px black solid;
+            padding: 5px;
+            font-size: 20px;
+            border-radius: 2px;
         }
     </style>
 </head>
+
 <body>
     <header>
         <section id="section_title">
             <h1><a href="../index.html">game community<a></h1>
         </section>
+
         <section id="section_time">
             <h3 id="clock"></h3>
         </section>
@@ -68,13 +99,14 @@
         <section id="section_mainmenu">
             <ul class="menu">
                 <li>
-                    <a href="#">이벤트/특가</a>
+                    <a href="#" class=top>이벤트/특가</a>
                     <ul class="hide">
+                        <li>이벤트</li>
+                        <li>이벤트</li>
                         <li>이벤트</li>
                         <li>이벤트</li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="#">뉴스/정보</a>
                     <ul class="hide">
@@ -100,16 +132,5 @@
         </section>
     </header>
 </body>
-<script>
-    function clock(){
-        var today = new Date();
-        var hour = today.getHours();
-        var min = today.getMinutes();
-        var sec = today.getSeconds();
 
-        document.getElementById("clock").innerHTML = hour+':'+min+':'+sec;
-        setTimeout('clock()',1000);
-    }
-    clock();
-</script>  
 </html>
